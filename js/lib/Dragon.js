@@ -1,22 +1,18 @@
-dinodrop.dragon = Object.create(dinodrop);
+dd.dragon = Object.create(dd);
 
-dinodrop.dragon.x = 0;
-dinodrop.dragon.y = 0;
-dinodrop.dragon.rotation = 0;
+dd.dragon.x = 100;
+dd.dragon.y = 150;
+dd.dragon.rotation = 0;
+dd.dragon.image = new Image();
+dd.dragon.image.src = 'images/dragon.png';
 
-dinodrop.dragon.ctx.translate(100, 150);
+dd.dragon.ctx.translate(this.x, this.y);
 
-dinodrop.dragon.draw = function() {
+dd.dragon.draw = function() {
     var ctx = this.ctx;
 
     ctx.save();
-
-    ctx.strokeStyle = "#000000";
-    ctx.beginPath();
-    ctx.moveTo(0, 0);
-    ctx.lineTo(0, 50);
-    ctx.stroke();
-    ctx.closePath();
+    ctx.drawImage(this.image, this.x, this.y);
     ctx.restore();
 
     return this;
