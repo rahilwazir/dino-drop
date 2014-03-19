@@ -11,8 +11,8 @@ function DinoDrop() {
     this.cHeight = 0;
     this.animLoopFrame = null;
 
-    this.dnow = Date.now();
-    this.dt = null;
+    this.lastTime = null;
+    this.gameTime = 0;
     this.changer = null;
     this.fps = 30;
     this.interval = 1000/this.fps;
@@ -35,6 +35,8 @@ DinoDrop.prototype.init = function() {
         this.cHeight = this.canvas.height;
 
         this.ctx = this.canvas.getContext('2d');
+
+        this.ctx.scale(2, 2);
     }
 };
 
@@ -45,22 +47,27 @@ DinoDrop.prototype.cancelAnimLoop = function() {
     this.animLoopFrame = null;
 };
 
-DinoDrop.prototype.animLoop = function(callback) {
-    this.animLoopFrame = window.requestAnimationFrame(this.animLoop.bind(this, callback));
-
+DinoDrop.prototype.clear = function() {
     this.ctx.clearRect(0, 0, this.cWidth, this.cHeight);
     this.ctx.setTransform(1, 0, 0, 1, 0, 0);
+};
 
-    this.changer = Date.now();
-    this.delta = this.changer - this.dnow;
+DinoDrop.prototype.animLoop = function(callback) {
 
-    if (this.delta > this.interval) {
-        this.dnow = this.changer - (this.delta % this.interval);
+    var now = Date.now();
+    var dt = (now - this.lastTime) / 1000.0;
 
-        if (callback && typeof callback === 'function') {
-            callback();
-        }
+    this.lastTime = now;
+
+    this.animLoopFrame = window.requestAnimationFrame(this.animLoop.bind(this, callback));
+
+    this.clear();
+
+    if (callback && typeof callback === 'function') {
+        callback();
+        this.gameTime += dt;
     }
+
 
 };
 
