@@ -17,8 +17,6 @@ dd.dragon.image.src = 'images/dragon-sprite.png';
 dd.dragon.initFrame = 1;
 dd.dragon.totalFrames = 3;
 
-dd.dragon.ctx.translate(dd.dragon.x, dd.dragon.y);
-
 dd.dragon.draw = function() {
     var ctx = this.ctx,
         imageObj = this.image, frame;
