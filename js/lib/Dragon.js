@@ -35,7 +35,8 @@ dd.dragon.draw = function() {
     frame = ( (this.initFrame === 1) ? this.swh[0] : this.initFrame * this.swh[0]);
 
     ctx.save();
-    ctx.drawImage(imageObj, this.sx, this.sy, frame, this.swh[1], this.x, this.y, frame, this.swh[1]);
+    ctx.drawImage(imageObj, this.sx, this.sy, this.swh[0], this.swh[1], this.x, this.y, this.swh[0], this.swh[1]);
+    //ctx.drawImage(imageObj, this.sx, this.sy, frame, this.swh[1], this.x, this.y, frame, this.swh[1]);
     ctx.restore();
 
     return this;

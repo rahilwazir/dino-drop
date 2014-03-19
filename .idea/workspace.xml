@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4bd6e90-ba3f-415d-af28-265d762e9e93" name="Default" comment="updates">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/lib/Sprites.js" />
       <change type="DELETED" beforePath="C:\wamp\www\dino-drop\images\dragon.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/lib/DinoDrop.js" afterPath="$PROJECT_DIR$/js/lib/DinoDrop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/lib/Dragon.js" afterPath="$PROJECT_DIR$/js/lib/Dragon.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/init.js" afterPath="$PROJECT_DIR$/js/init.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dino-drop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,19 +45,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sprites.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Sprites.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/lib/Sprites.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="752">
+            <state line="41" column="4" selection-start="801" selection-end="801" vertical-scroll-proportion="0.80293757" vertical-offset="0" max-vertical-offset="817">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dragon.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Dragon.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/lib/Dragon.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="579" selection-end="579" vertical-scroll-proportion="0.85925925" vertical-offset="0" max-vertical-offset="752">
+            <state line="15" column="7" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="752">
               <folding />
             </state>
           </provider>
@@ -312,9 +306,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32858837" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32858837" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -432,6 +426,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/lib/Dragon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="7" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="752">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="22" selection-start="145" selection-end="145" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="368">
@@ -450,14 +451,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/lib/Sprites.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="146" selection-end="146" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="752">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/lib/Dragon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="579" selection-end="579" vertical-scroll-proportion="0.85925925" vertical-offset="0" max-vertical-offset="752">
+        <state line="41" column="4" selection-start="801" selection-end="801" vertical-scroll-proportion="0.80293757" vertical-offset="0" max-vertical-offset="817">
           <folding />
         </state>
       </provider>
