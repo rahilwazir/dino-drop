@@ -31,3 +31,24 @@
             clearTimeout(id);
         };
 }());
+
+/**
+ * Canvas clear by JonathanK http://stackoverflow.com/questions/2142535/how-to-clear-the-canvas-for-redrawing/9722502#9722502
+ * @type {Function|*}
+ */
+CanvasRenderingContext2D.prototype.clear = CanvasRenderingContext2D.prototype.clear || function (preserveTransform) {
+    if (preserveTransform) {
+        this.save();
+        this.setTransform(1, 0, 0, 1, 0, 0);
+    }
+
+    this.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+    if (preserveTransform) {
+        this.restore();
+    }
+};
+
+window.addEventListener('orientationchange',function() {
+    setTimeout(function() { window.scrollTo(0,1); }, 0);
+});

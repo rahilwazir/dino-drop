@@ -2,18 +2,27 @@ window.addEventListener('load', function() {
     'use strict';
 
     var dragon = dd.dragon,
-        sky = dd.sky;
+        sky = dd.sky,
+        grass = dd.grass;
 
     var _dragon = function() {
             dragon.draw();
         },
         _sky = function() {
             sky.draw();
+        },
+        _grass = function() {
+            grass.draw();
         };
 
 
-    // draw dragon
-    dragon.draw();
+    var allAnimationSprites = function () {
+        _sky();
+        _dragon();
+        _grass();
+    };
+
+    allAnimationSprites();
 
     var my_combos = [
         {
@@ -21,28 +30,28 @@ window.addEventListener('load', function() {
             "is_exclusive"  : true,
             "on_keydown"    : function() {
                 dragon.animLoop(function() {
-                    dragon.x++;
-                    _sky();
-                    _dragon();
+                    dragon.animate('right');
+                    allAnimationSprites();
                 });
             },
             "on_keyup"      : function() {
                 dragon.cancelAnimLoop();
-            }
+            },
+            "prevent_repeat" : true
         },
         {
             "keys"          : "left",
             "is_exclusive"  : true,
             "on_keydown"    : function() {
                 dragon.animLoop(function() {
-                    dragon.x--;
-                    _sky();
-                    _dragon();
+                    dragon.animate('left');
+                    allAnimationSprites();
                 });
             },
             "on_keyup"      : function() {
                 dragon.cancelAnimLoop();
-            }
+            },
+            "prevent_repeat" : true
         },
         /*{
             "keys"          : "up",
@@ -72,22 +81,20 @@ window.addEventListener('load', function() {
         }*/
     ];
 
+    listener.register_many(my_combos);
+
     var angle = 0;
 
     dragon.animLoop(function() {
-        dragon.x += 0.1;
-        dragon.y = dd.cHeight / 2 + Math.sin(angle) * 30;
+        dragon.y = dd.cHeight / 8 + Math.sin(angle) * 30;
         angle += 0.1;
 
-        if (dragon.y > 340) {
+        /*if (dragon.y > 340) {
             dragon.initFrame = 2;
-        }
+        }*/
 
-        _sky();
-        _dragon();
+        allAnimationSprites();
 
     });
-
-    listener.register_many(my_combos);
 
 }, false);
