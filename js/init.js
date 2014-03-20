@@ -30,7 +30,7 @@ window.addEventListener('load', function() {
             "is_exclusive"  : true,
             "on_keydown"    : function() {
                 dragon.animLoop(function() {
-                    dragon.animate('right');
+                    dragon.walk('right');
                     allAnimationSprites();
                 });
             },
@@ -44,7 +44,7 @@ window.addEventListener('load', function() {
             "is_exclusive"  : true,
             "on_keydown"    : function() {
                 dragon.animLoop(function() {
-                    dragon.animate('left');
+                    dragon.walk('left');
                     allAnimationSprites();
                 });
             },
@@ -86,15 +86,20 @@ window.addEventListener('load', function() {
     var angle = 0;
 
     dragon.animLoop(function() {
-        dragon.y = dd.cHeight / 8 + Math.sin(angle) * 30;
-        angle += 0.1;
-
-        /*if (dragon.y > 340) {
-            dragon.initFrame = 2;
-        }*/
-
         allAnimationSprites();
 
+        dragon.y = dd.cHeight / 8 + Math.sin(angle) * 50;
+        angle += 0.1;
+
+        if (dragon.y < 70) {
+            dragon.sy = dragon.spriteChanger[2];
+        } else if (dragon.y < 110) {
+            dragon.sy = dragon.spriteChanger[1];
+        } else if (dragon.y < 140) {
+            dragon.sy =  dragon.spriteChanger[0];
+        }
+
+        console.log(dragon.y);
     });
 
 }, false);
